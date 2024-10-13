@@ -3,7 +3,7 @@ USE ShopDB;
 
 CREATE TABLE Countries (
     ID INT PRIMARY KEY,
-    Name VARCHAR(50),
+    Name VARCHAR(50)
 );
 
 CREATE TABLE Warehouses (
@@ -19,7 +19,7 @@ CREATE TABLE ProductInventory (
     ProductName VARCHAR(50),
     WarehouseAmount INT,
     WarehouseID INT,
-	FOREIGN KEY (WarehouseID) REFERENCES Warehouse(ID) ON DELETE NO ACTION,
+    FOREIGN KEY (WarehouseID) REFERENCES Warehouses(ID) ON DELETE NO ACTION
 );
 
 INSERT INTO Countries (ID, Name) VALUES (1, 'Country1');
